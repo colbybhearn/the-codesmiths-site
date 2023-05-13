@@ -15,24 +15,24 @@
     
   Skills
 
-  <Section :direction="'left'">
+  <SectionArrow :direction="'left'">
     <H1>Web applications</H1>
-  </Section>
+  </SectionArrow>
 
-  <Section :direction="'right'">
+  <SectionArrow :direction="'right'">
     <H1>3D Modeling</H1>
-  </Section>
+  </SectionArrow>
 
-  <Section :direction="'left'">
+  <SectionArrow :direction="'left'">
     <H1>Drone Videography</H1>
-  </Section>
+  </SectionArrow>
 
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Section from '@/components/Section.vue';
+import SectionArrow from '@/components/SectionArrow.vue';
 export default {
   name: 'HomeView',
   computed:{
@@ -74,7 +74,7 @@ export default {
     }
   },
   components: {
-    Section
+    SectionArrow
   }
 }
 </script>
