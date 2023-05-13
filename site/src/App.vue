@@ -14,7 +14,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: white;
+  background: rgb(51, 51, 51);
+  
+  //overflow: hidden;
+}
+body{
+  margin:0px
 }
 
 nav {
@@ -22,10 +28,12 @@ nav {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: white;
+    text-decoration: none;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: white;
+      text-decoration: none;
     }
   }
 }

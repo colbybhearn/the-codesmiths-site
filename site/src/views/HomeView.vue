@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     
-    You need {{need}} (character traits)
+    You need {{need}}
 
 
     <br />
@@ -15,13 +15,24 @@
     
   Skills
 
+  <Section :direction="'left'">
+    <H1>Web applications</H1>
+  </Section>
+
+  <Section :direction="'right'">
+    <H1>3D Modeling</H1>
+  </Section>
+
+  <Section :direction="'left'">
+    <H1>Drone Videography</H1>
+  </Section>
 
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
+import Section from '@/components/Section.vue';
 export default {
   name: 'HomeView',
   computed:{
@@ -63,6 +74,7 @@ export default {
     }
   },
   components: {
+    Section
   }
 }
 </script>
