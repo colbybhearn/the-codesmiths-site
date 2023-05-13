@@ -1,38 +1,72 @@
 <template>
   <div class="home">
     
-    You need {{need}}
-
-
     <br />
-    Service matters.
-
-    <ul>      
-      <li>Tranparency - know status and progress while enjoying less human management.</li>
-      <li>Communication - expect Honesty, Clarity, Responsiveness, </li>
-      <li>Relationships - we are people people, not just computer people.</li>
-    </ul>
+    Do you need <u>{{need}}</u>?    <br/>
+    Forge ahead with <b><i>The Codesmiths</i></b>
+    <br />
+    <br />
     
-  Skills
+  
 
-  <SectionArrow :direction="'left'">
-    <H1>Web applications</H1>
-  </SectionArrow>
+  <SectionPlain :title="'what we do'" :color="'red'" :size="100" @toggle="toggle">
+    
+    <SectionPlain :title="'Web applications'" :color="'red'" :size="50" >
+      <div class="list">
+        <ul style="text-align:left;">      
+          <li>Online product configurators</li>
+          <li>Internal tools for your team</li>
+          <li>Integration with 3rd parties</li>          
+        </ul>
+      </div>
+      </SectionPlain>
+      <SectionPlain :title="'3D modeling and visualizations'" :color="'red'" :size="50" >
+        <div class="list">
+          <ul style="text-align:left;">      
+            <li>3D Design Tools</li>
+            <li>Product Visualization</li>
+            <li>Unique Interactive graphics</li>          
+          </ul>
+      </div>
+    </SectionPlain>
+    <SectionPlain :title="'Drone Videography'" :color="'red'" :size="50" >
+        <div class="list">
+          <ul style="text-align:left;">      
+            <li></li>
+            <li>Database Design</li>
+            <li>Requirements Analysis</li>          
+          </ul>
+      </div>
+    </SectionPlain>
 
-  <SectionArrow :direction="'right'">
-    <H1>3D Modeling</H1>
-  </SectionArrow>
+  </SectionPlain>
 
-  <SectionArrow :direction="'left'">
-    <H1>Drone Videography</H1>
-  </SectionArrow>
+  <SectionPlain :title="'how we work'" :color="'green'" :size="100" @toggle="toggle">
+    <SectionPlain :title="'Service matters... a lot.'" :color="'green'" :size="50" >
+      
+  <div >
+      <ul style="text-align:left;">      
+        <li>Tranparency - know status and progress while enjoying less human management.</li>
+        <li>Communication - expect honesty, clarity, responsiveness, </li>
+        <li>Relationships - we are people people, not just computer people.</li>
+        <li>Accountability - everyone is accountable to Someone, and that's good.</li>
+      </ul>
+    </div>
+    </SectionPlain>
+    <SectionPlain :color="'green'" :size="50" >more</SectionPlain>
+  </SectionPlain>
+
+  <SectionPlain :title="'more about us'" :color="'blue'" :size="100" @toggle="toggle">
+    <SectionPlain :color="'blue'" :size="50" >more</SectionPlain>
+    <SectionPlain :color="'blue'" :size="50" >more</SectionPlain>
+  </SectionPlain>
 
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import SectionArrow from '@/components/SectionArrow.vue';
+import SectionPlain from '@/components/SectionPlain.vue'
 export default {
   name: 'HomeView',
   computed:{
@@ -40,7 +74,7 @@ export default {
   },
   data: function () {
     return {
-      need: "", 
+      need: "help", 
       needs: [
         "thinkers",
         "doers",
@@ -54,27 +88,40 @@ export default {
       ]
     }
   },
+  
   mounted: function(){
     this.changeNeed();
   },
   methods:{
+    toggle: function(name){
+      console.log(name);
+    },
     changeNeed: function(){
       setTimeout(() => {
         this.needTimeout();
         this.changeNeed();
-      }, 1000)
+      }, 5000)
 
     },
     needTimeout: function(){
       let i = Math.random()*this.needs.length;      
       i = Math.round(i);
-      console.log(i);
+      //console.log(i);
       this.need = this.needs[i];
       
     }
   },
   components: {
-    SectionArrow
+    SectionPlain
   }
 }
 </script>
+
+<style scoped>
+.home{
+  font-size: 2em;
+  text-align: center;
+  margin: auto;
+  display: inline-block;
+}
+</style>
