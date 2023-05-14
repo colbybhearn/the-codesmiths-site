@@ -8,7 +8,7 @@
         {{title}}
       </div>
       <div v-if="show" class="content">      
-        <slot >default</slot>
+        <slot ></slot>
       </div>      
     </div>
     
@@ -53,7 +53,7 @@ export default {
 .section{
   text-align: left;
   display: block;
-  margin: auto;
+  margin: 20px auto;
 }
 .wrapper{
   display: inline-block;
@@ -67,7 +67,12 @@ export default {
   display:inline-block;
   box-shadow: 7px 7px 1px 1px black;
   border-radius: 25px;  
+  transition: box-shadow 2s, width 2s;
 } 
+.banner:hover{
+  box-shadow: -7px 7px 2px 2px black;    
+}
+
 
 
 .content{

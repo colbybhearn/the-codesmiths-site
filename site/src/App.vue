@@ -11,12 +11,13 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: white;
-  background: rgb(36, 36, 36);
-  height: 100vh
+  
+  
   //overflow: hidden;
 }
 body{
-  margin:0px
+  margin:0px;
+  background: rgb(36, 36, 36);
 }
 
 nav {
