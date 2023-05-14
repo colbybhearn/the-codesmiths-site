@@ -29,15 +29,6 @@
           </ul>
       </div>
     </SectionPlain>
-    <SectionPlain :title="'Drone Videography'" :color="'red'" :size="50" >
-        <div class="list">
-          <ul style="text-align:left;">      
-            <li></li>
-            <li>Database Design</li>
-            <li>Requirements Analysis</li>          
-          </ul>
-      </div>
-    </SectionPlain>
 
   </SectionPlain>
 
@@ -47,18 +38,38 @@
   <div >
       <ul style="text-align:left;">      
         <li>Tranparency - know status and progress while enjoying less human management.</li>
-        <li>Communication - expect honesty, clarity, responsiveness, </li>
-        <li>Relationships - we are people people, not just computer people.</li>
-        <li>Accountability - everyone is accountable to Someone, and that's good.</li>
+        <li>Communication - expect honesty, clarity, and responsiveness</li>
+        <li>Relationships - we are people people, not just computer people</li>
+        <li>Accountability - everyone is accountable to Someone, and that's good</li>
       </ul>
     </div>
     </SectionPlain>
-    <SectionPlain :color="'green'" :size="50" >more</SectionPlain>
+    <SectionPlain :title="'Iterative'" :color="'green'" :size="50" >
+      Whether you call it Agile or Lean, we work with you to understand a decent iteration cycle.<br/>
+      Seeing new working increments of work frequently let you guide the development process as it goes.            
+    </SectionPlain>
+    <SectionPlain :title="'Prioritized'" :color="'green'" :size="50" >
+      If everything is a priority, then nothing is. <br/>
+      You should have control over the priority of each piece of work.
+    </SectionPlain>
+    <SectionPlain :title="'Tenets'" :color="'green'" :size="50" >
+      <div >
+      <ul style="text-align:left;">      
+        <li>People over Projects</li>
+        <li>Character over Competence</li>
+        <li>Do unto others...</li>
+        <li>No excuses.</li>
+      </ul>
+    </div>
+    </SectionPlain>
   </SectionPlain>
 
   <SectionPlain :title="'more about us'" :color="'blue'" :size="100" @toggle="toggle">
-    <SectionPlain :color="'blue'" :size="50" >more</SectionPlain>
-    <SectionPlain :color="'blue'" :size="50" >more</SectionPlain>
+    <SectionPlain :title="'who are we?'" :color="'blue'" :size="50" >
+      We are passionate about delivering quality software to help you grow your business.
+    </SectionPlain>
+    <SectionPlain :title="''" :color="'blue'" :size="50" >
+    </SectionPlain>
   </SectionPlain>
 
   </div>
@@ -84,7 +95,7 @@ export default {
         "communication",
         "relationships",
         "integrators",
-        "smart-workers",
+        "smart workers",
       ]
     }
   },
